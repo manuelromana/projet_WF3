@@ -5,17 +5,47 @@
 			<title>Résultat</title>
 			<style>
 			
-				p{
-					color:red;
-					border:1px solid black;
-					border-radius:2rem;
+				.greeting {
+					width:30%;
+					box-shadow: 4px 4px 16px rgba(194, 184, 184,0.6) ;
+					padding :1rem;
+					border-radius: 2px;
 					margin:auto;
-					display:inline-block
+					text-align: center;
+					margin-top: 16rem;
+					animation: 3s ease-out greeting-effect;
+				}
+				@keyframes greeting-effect {
+					from {
+						transform: translateY(-100%);
+						/* transform: rotateY(60deg); */
+					}
+					25%{
+						/* transform: translateX(0%); */
+						transform: rotateY(90deg);
+
+					}
+					50%{
+						/* transform: translateX(100%); */
+						transform: rotateY(180deg);
+
+					}
+					100% {
+						transform: rotateY(360deg);
+    					/* transform: translateX(0); */
+  						}
 				}
 			
 			</style>
 		</head>
 		<body>
-			<p>Bonjour {{prenom}} {{nom}}, j'espère que vous allez bien.</p>
+			<div class="greeting">
+
+				<h1>
+
+					Bonjour {{prenom}} {{nom}}
+				</h1>
+				<p>...j'espère que vous allez bien.</p>
+			</div>
 		</body>
 	</html>
