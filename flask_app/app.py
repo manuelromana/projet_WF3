@@ -8,6 +8,7 @@ def app_root():
 
 @app.route('/formulaire')
 def index():
+  print("Merci")
   return render_template("index.html")
 
 @app.route('/resultat',methods = ['POST'])

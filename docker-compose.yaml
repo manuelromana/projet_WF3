@@ -1,6 +1,8 @@
 version: '3'
 services:
   app1:
+    volumes:
+      - ./flask_app:/app
     restart: always
     image: app_1:1.0
     expose:
@@ -19,7 +21,7 @@ services:
     restart: always
     image: my_nginx:1.0
     ports:
-      - 8082:80
+      - 38080:80
     links:
       - app1:app1
       - app2:app2
