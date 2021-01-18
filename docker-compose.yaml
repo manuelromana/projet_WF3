@@ -21,7 +21,7 @@ services:
     restart: always
     image: my_nginx:1.0
     ports:
-      - 38080:80
+      - 3880:80
     links:
       - app1:app1
       - app2:app2
